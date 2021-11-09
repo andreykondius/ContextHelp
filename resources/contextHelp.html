@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+var savePage = ""
+
+function findText(inp)
+{
+    var inpText = document.getElementById(inp).value;
+    var el = document.getElementById(inpText);
+    var searchText = el.firstChild.innerHTML;
+    if (savePage.length)
+    {
+        document.body.innerHTML = savePage;
+    }
+    else
+    {
+        savePage = document.body.innerHTML;
+    }
+    document.body.innerHTML = document.body.innerHTML + searchText;
+}
+
+</script>
+</head>
+
+<body>
+    <h2>Context help (for example)</h2>
+    <input type="text" id="var-search-text" value="">
+    <input type="button" onclick="javascript: findText('var-search-text'); return false;" value="Search">
+    <br/><i>Input the search text.</i>
+    <hr/>
+
+    <p id="SOLID"><span style="visibility: hidden;"><b>SOLID</b><br/>
+    Принципы SOLID — это руководства, которые также могут применяться во время работы над существующим программным обеспечением.
+    Принципы:
+    - Принцип единственной ответственности.
+    - Принцип открытости/закрытости.
+    - Принцип подстановки Лисков.
+    - Принцип разделения интерфейса.
+    - Принцип инверсии зависимостей.
+
+    <p id="Агрегирование"><span style="visibility: hidden;"><b>Агрегирование</b><br/>
+    В объектно-ориентированном программировании под агрегированием (или как его еще называют - делегированием) подразумевают методику создания нового класса из уже существующих классов путём их включения
+
+    <p id="ООП"><span style="visibility: hidden;"><b>ООП</b><br/>
+    Объе́ктно-ориенти́рованное программи́рование (ООП) — методология программирования, основанная на представлении программы в виде совокупности объектов, каждый из которых является экземпляром определённого класса, а классы образуют иерархию наследования.
+
+</body>
+</html>
